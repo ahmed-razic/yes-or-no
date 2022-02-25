@@ -6,6 +6,7 @@ class DomElements {
     this.showUserContainer = document.querySelector('#showUserContainer');
 
     this.result = {
+      startButton: document.querySelector('#startButton'),
       yesButton: document.querySelector('#yesButton'),
       noButton: document.querySelector('#noButton'),
       result: document.querySelector('#answer'),
