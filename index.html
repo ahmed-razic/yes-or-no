@@ -19,22 +19,22 @@
         <h1><img src="./favicon.ico" alt="question" />Yes or No<img src="./favicon.ico" alt="question" /></h1>
       </header>
       <div class="userContainer">
-        <div class="inputUser">
+        <div id="inputUserContainer" class="inputUser">
           <label for="inputUserName">Your name</label>
           <input id="inputUserName" name="inputUserName" type="text" required />
           <button type="submit" class="button buttonSave" id="buttonSave">Save</button>
         </div>
-        <div class="showUser">
+        <div id="showUserContainer" class="showUser">
           <p id="userName">Name</p>
         </div>
       </div>
       <div class="resultsContainer">
         <h3>? Is it Yes or No ?</h3>
         <div class="buttons">
-          <button>Yes</button>
-          <button>No</button>
+          <button id="yesButton">Yes</button>
+          <button id="noButton">No</button>
         </div>
-        <p class="answer">Wrong! Try Again.</p>
+        <p id="answer" class="answer">Wrong! Try Again.</p>
       </div>
       <p id="error" class="error">Error</p>
     </main>
