@@ -8,7 +8,7 @@ class DomElements {
     this.result = {
       yesButton: document.querySelector('#yesButton'),
       noButton: document.querySelector('#noButton'),
-      answer: document.querySelector('#answer'),
+      result: document.querySelector('#answer'),
     };
 
     this.error = document.querySelector('#error');
