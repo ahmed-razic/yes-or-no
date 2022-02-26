@@ -4,14 +4,17 @@ class DomElements {
     this.saveButton = document.querySelector('#saveButton');
     this.inputUserContainer = document.querySelector('#inputUserContainer');
     this.showUserContainer = document.querySelector('#showUserContainer');
+    this.input = document.querySelector('#inputUserContainer');
+    this.user = document.querySelector('#userName');
 
-    this.result = {
+    this.results = {
       startButton: document.querySelector('#startButton'),
       yesButton: document.querySelector('#yesButton'),
       noButton: document.querySelector('#noButton'),
       result: document.querySelector('#answer'),
     };
 
-    this.error = document.querySelector('#error');
+    this.errorName = document.querySelector('#errorName');
+    this.errorData = document.querySelector('#errorData');
   }
 }
