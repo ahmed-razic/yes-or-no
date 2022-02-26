@@ -62,6 +62,10 @@ input:focus {
   border: 5px solid #a75d17;
 }
 
+.question {
+  visibility: hidden;
+}
+
 button {
   border: none;
   border-radius: 10px;

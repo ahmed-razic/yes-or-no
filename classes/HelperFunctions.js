@@ -26,8 +26,13 @@ class HelperFunctions {
     this.elements.results.startButton.removeAttribute('disabled');
   }
 
-  setUiStatus(isDisabled) {
-    if (!isDisabled) {
+  setUiState(isDisabled) {
+    if (isDisabled) {
+      this.elements.results.yesButton.setAttribute('disabled', 'disabled');
+      this.elements.results.noButton.setAttribute('disabled', 'disabled');
+    } else {
+      this.elements.results.yesButton.removeAttribute('disabled');
+      this.elements.results.noButton.removeAttribute('disabled');
     }
   }
 }

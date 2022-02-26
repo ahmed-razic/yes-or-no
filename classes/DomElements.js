@@ -12,6 +12,7 @@ class DomElements {
       yesButton: document.querySelector('#yesButton'),
       noButton: document.querySelector('#noButton'),
       result: document.querySelector('#answer'),
+      question: document.querySelector('#question'),
     };
 
     this.errorName = document.querySelector('#errorName');
