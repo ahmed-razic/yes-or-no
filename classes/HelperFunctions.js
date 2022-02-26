@@ -19,6 +19,13 @@ class HelperFunctions {
     }, 3000);
   }
 
+  showErrorData(message) {
+    this.elements.errorData.innerHTML = message;
+    setTimeout(() => {
+      this.elements.errorData.innerHTML = '';
+    }, 3000);
+  }
+
   showUser(userName) {
     this.elements.inputUserContainer.style.display = 'none';
     this.elements.user.innerHTML = `Welcome ${userName}`;

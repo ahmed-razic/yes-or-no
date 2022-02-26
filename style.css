@@ -109,3 +109,9 @@ button:hover {
   margin-top: 2rem;
   color: red;
 }
+
+.errorData {
+  display: block;
+  margin-top: 2rem;
+  color: red;
+}

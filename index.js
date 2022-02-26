@@ -37,6 +37,7 @@ async function results() {
   await fetchData.getData().then(data => {
     serverData = { ...data };
     helperFunctions.setUiState(false);
+
     elements.results.yesButton.addEventListener('click', () => {
       userAnswer = 'yes';
       showResults(data, userAnswer);
@@ -45,8 +46,6 @@ async function results() {
       userAnswer = 'no';
       showResults(data, userAnswer);
     });
-    console.log(data);
-    elements.errorData.innerHTML = 'Correct!';
   });
 }
 
