@@ -3,22 +3,13 @@ class FetchData {
     this.apiEndPoint = 'https://yesno.wtf/api';
     this.helperFunctions = new HelperFunctions();
     this.elements = new DomElements();
+    this.resultData = {};
   }
 
-  getData(userAnwer) {
+  async getData() {
     this.elements.results.startButton.setAttribute('disabled', 'disabled');
-    fetch(this.apiEndPoint)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data.answer);
-        console.log(userAnswer);
-        if (data.answer === userAnswer) {
-          console.log('True');
-          //this.elements.results.result.innerHTML = 'Correct!';
-        } else if (data.answer !== userAnswer) {
-          console.log('False');
-          //this.elements.results.result.innerHTML = 'Wrong! Try Again!';
-        }
-      });
+    const response = await fetch(this.apiEndPoint);
+    const data = await response.json();
+    return data;
   }
 }

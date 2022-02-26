@@ -28,14 +28,15 @@
           <p id="userName" class="userName">Name</p>
         </div>
       </div>
-      <div class="resultsContainer">
+      <div id="resultsContainer" class="resultsContainer">
         <button id="startButton" disabled="disabled">Start</button>
         <h3 id="question" class="question">Is it Yes or No</h3>
         <div class="buttons">
           <button id="yesButton" disabled="disabled">Yes</button>
           <button id="noButton" disabled="disabled">No</button>
         </div>
-        <p id="result" class="result">Wrong! Try Again.</p>
+        <p id="result" class="result"></p>
+        <button id="resetButton" class="button" disabled="disabled" onClick="window.location.reload();">Reset</button>
       </div>
       <p id="errorData" class="error">Error</p>
     </main>

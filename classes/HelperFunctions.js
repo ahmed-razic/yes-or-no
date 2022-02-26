@@ -35,4 +35,12 @@ class HelperFunctions {
       this.elements.results.noButton.removeAttribute('disabled');
     }
   }
+
+  async showResults(dataAnswer, userAnswer) {
+    if (dataAnswer === userAnswer) {
+      this.elements.results.result.innerHTML = 'You guessed it!';
+    } else if (dataAnswer !== userAnswer) {
+      this.elements.results.result.innerHTML = 'Wrong! Try again';
+    }
+  }
 }

@@ -8,11 +8,13 @@ class DomElements {
     this.user = document.querySelector('#userName');
 
     this.results = {
+      resultsContainer: document.querySelector('#resultsContainer'),
       startButton: document.querySelector('#startButton'),
       yesButton: document.querySelector('#yesButton'),
       noButton: document.querySelector('#noButton'),
-      result: document.querySelector('#answer'),
+      result: document.querySelector('#result'),
       question: document.querySelector('#question'),
+      reset: document.querySelector('#resetButton'),
     };
 
     this.errorName = document.querySelector('#errorName');

@@ -55,15 +55,20 @@ input:focus {
   align-items: center;
   justify-content: center;
   background-color: burlywood;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   margin: 2rem;
   border: 5px solid #a75d17;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .question {
   visibility: hidden;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 button {
@@ -90,6 +95,11 @@ button:disabled {
 
 button:hover {
   box-shadow: 0 0 1px #ffffff, 0 0 3px #ff8800, 3px 3px 5px #ff8800;
+}
+
+.result {
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .errorName {

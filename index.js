@@ -1,5 +1,6 @@
 let userName = '';
-let userAnswer = 'sss';
+let userAnswer = '';
+let serverData = {};
 
 const elements = new DomElements();
 const helperFunctions = new HelperFunctions();
@@ -26,23 +27,39 @@ elements.saveButton.addEventListener('click', () => {
 function startGame() {
   elements.results.startButton.removeAttribute('disabled');
   elements.results.startButton.addEventListener('click', () => {
-    userResponse();
+    results();
   });
 }
 
-function userResponse() {
+async function results() {
   elements.results.startButton.setAttribute('disabled', 'disabled');
   elements.results.question.style.visibility = 'visible';
-  helperFunctions.setUiState(false);
+  await fetchData.getData().then(data => {
+    serverData = { ...data };
+    helperFunctions.setUiState(false);
+    elements.results.yesButton.addEventListener('click', () => {
+      userAnswer = 'yes';
+      showResults(data, userAnswer);
+    });
+    elements.results.noButton.addEventListener('click', () => {
+      userAnswer = 'no';
+      showResults(data, userAnswer);
+    });
+    console.log(data);
+    elements.errorData.innerHTML = 'Correct!';
+  });
+}
 
-  elements.results.yesButton.addEventListener('click', () => {
+function showResults(data, userAnswer) {
+  if (data.answer === userAnswer) {
+    elements.results.result.innerHTML = 'Correct!';
+    elements.results.resultsContainer.style.backgroundImage = `url(${data.image})`;
     helperFunctions.setUiState(true);
-    userAnswer = 'yes';
-    fetchData.getData(userAnswer);
-  });
-  elements.results.noButton.addEventListener('click', () => {
+    elements.results.reset.removeAttribute('disabled');
+  } else {
+    elements.results.result.innerHTML = 'Wrong!';
+    elements.results.resultsContainer.style.backgroundImage = `url(${data.image})`;
     helperFunctions.setUiState(true);
-    userAnswer = 'no';
-    fetchData.getData(userAnswer);
-  });
+    elements.results.reset.removeAttribute('disabled');
+  }
 }
