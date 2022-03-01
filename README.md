@@ -3,7 +3,7 @@
 ---
 
 <div>
-<a href="https://yesno.wtf/api" target="_blank" rel="noopener noreferrer"
+<a href="https://yesno.wtf/#api" target="_blank" rel="noopener noreferrer"
     style="padding:0.5rem 0.7rem;
     color: green;
     background: #BDFFF3;
